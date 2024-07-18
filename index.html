@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Coffee Shop</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Products</a>
+                        <div class="dropdown-content">
+                            <a href="#" data-category="coffee">Coffee</a>
+                            <a href="#" data-category="tea">Tea</a>
+                            <a href="#" data-category="mocktails">Mocktails</a>
+                        </div>
+                    </li>
+                    <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <input type="text" id="search-bar" placeholder="Search...">
+                <a href="profile.html"><img src="images/profile-icon.png" alt="Profile" class="profile-icon"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="products" class="product-list">
+            <h2 id="category-heading">Our Coffee Selection</h2>
+            <div class="product-grid">
+                <!-- Coffee products (default) -->
+                <div class="product coffee" data-id="1" data-name="Espresso" data-price="5">
+                    <img src="images/espresso.jpg" alt="Espresso" class="product-image">
+                    <h3>Espresso</h3>
+                    <p>$5.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product coffee" data-id="2" data-name="Latte" data-price="6">
+                    <img src="images/latte.jpg" alt="Latte" class="product-image">
+                    <h3>Latte</h3>
+                    <p>$6.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product coffee" data-id="3" data-name="Cappuccino" data-price="6.5">
+                    <img src="images/cappuccino.jpg" alt="Cappuccino" class="product-image">
+                    <h3>Cappuccino</h3>
+                    <p>$6.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product coffee" data-id="4" data-name="Mocha" data-price="7">
+                    <img src="images/mocha.jpg" alt="Mocha" class="product-image">
+                    <h3>Mocha</h3>
+                    <p>$7.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product coffee" data-id="5" data-name="Americano" data-price="4.5">
+                    <img src="images/americano.jpg" alt="Americano" class="product-image">
+                    <h3>Americano</h3>
+                    <p>$4.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product coffee" data-id="6" data-name="Flat White" data-price="5.5">
+                    <img src="images/flat_white.jpg" alt="Flat White" class="product-image">
+                    <h3>Flat White</h3>
+                    <p>$5.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product coffee" data-id="7" data-name="Macchiato" data-price="5.5">
+                    <img src="images/macchiato.jpg" alt="Macchiato" class="product-image">
+                    <h3>Macchiato</h3>
+                    <p>$5.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product coffee" data-id="8" data-name="Cold Brew" data-price="6">
+                    <img src="images/cold_brew.jpg" alt="Cold Brew" class="product-image">
+                    <h3>Cold Brew</h3>
+                    <p>$6.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Tea products (hidden by default) -->
+                <div class="product tea" data-id="9" data-name="Green Tea" data-price="3">
+                    <img src="images/green_tea.jpg" alt="Green Tea" class="product-image">
+                    <h3>Green Tea</h3>
+                    <p>$3.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product tea" data-id="10" data-name="Chai Latte" data-price="4">
+                    <img src="images/chai_latte.jpg" alt="Chai Latte" class="product-image">
+                    <h3>Chai Latte</h3>
+                    <p>$4.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product tea" data-id="11" data-name="Herbal Tea" data-price="3.5">
+                    <img src="images/herbal_tea.jpg" alt="Herbal Tea" class="product-image">
+                    <h3>Herbal Tea</h3>
+                    <p>$3.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product tea" data-id="12" data-name="Black Tea" data-price="3">
+                    <img src="images/black_Tea.jpg" alt="Black Tea" class="product-image">
+                    <h3>Black Tea</h3>
+                    <p>$3.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product tea" data-id="13" data-name="Oolong Tea" data-price="4.5">
+                    <img src="images/oolong_tea.jpg" alt="Oolong Tea" class="product-image">
+                    <h3>Oolong Tea</h3>
+                    <p>$4.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Mocktail products (hidden by default) -->
+                <div class="product mocktails" data-id="14" data-name="Virgin Mojito" data-price="5">
+                    <img src="images/virgin_mojito.jpg" alt="Virgin Mojito" class="product-image">
+                    <h3>Virgin Mojito</h3>
+                    <p>$5.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product mocktails" data-id="15" data-name="Pina Colada" data-price="6">
+                    <img src="images/pina_Colada.jpg" alt="Pina Colada" class="product-image">
+                    <h3>Pina Colada</h3>
+                    <p>$6.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product mocktails" data-id="16" data-name="Mango Mule" data-price="5.5">
+                    <img src="images/mango_mule.jpg" alt="Mango Mule" class="product-image">
+                    <h3>Mango Mule</h3>
+                    <p>$5.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product mocktails" data-id="17" data-name="Berry Smash" data-price="6">
+                    <img src="images/blackberry-smash.jpg" alt="Berry Smash" class="product-image">
+                    <h3>Berry Smash</h3>
+                    <p>$6.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product mocktails" data-id="18" data-name="Cucumber Cooler" data-price="5">
+                    <img src="images/cucumber_Cooler.jpg" alt="Cucumber Cooler" class="product-image">
+                    <h3>Cucumber Cooler</h3>
+                    <p>$5.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
